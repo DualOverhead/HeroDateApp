@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{%for hero in final_list%}
+    <div class="d-inline-block align-top">
+        <div class="row">
+            <div class="col-md-4 mb-5">
+                <div class="card border-danger" style="width: 18rem;">
+                    <img src="{{hero.url}}" class="card-img-top" alt="...">
+                    <div class="card-body bg-dark">
+                        <h5 class="card-title text-white">{{hero.name}}</h5>
+                        <p class="text-white font-weight-bold">"{{hero.one_liner}}"</p>
+                        <hr class="bg-light">
+                        <p class="card-text text-white">Height: {{hero.height}}</p>
+                        <p class="card-text text-white">Weight: {{hero.weight}}</p>
+                        <p class="card-text text-white">Eye Color: {{hero.eyecolor}}</p>
+                        <hr class="bg-light">                     
+                        <p class="card-text text-white font-weight-bold">Hobbies: </p>
+                            {%for hobby in hero.hero_hobbies%}
+                            <p class="text-white">- {{hobby}}</p>                        
+                            {%endfor%}       
+                        <form method="POST" action="{%url 'message' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="hero_name" value={{hero.hero_id}}>
+                            <span> <button class=" btn btn-block btn-success btn-sm float-right " type="submit">Say Hi</button>
+                            </span>
+                        </form>         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{%endfor%}
+
+{% endblock content %}
+
+
+

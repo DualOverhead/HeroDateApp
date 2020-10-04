@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{%block content%}
+
+<div class="jumbotron bg-dark">
+    <h1 class="display-4 text-danger">Find Your Hero!</h1>
+    <p class="lead text-danger">The World's #1 Hero Dating Site!</p>
+    <hr class="my-4 bg-danger">
+
+<form method="POST" class="text-danger">
+    {% csrf_token %}
+    {{form|crispy}}
+    <button class="btn btn-success btn-lg btn-block"type="submit">Log In</button>
+</form>
+</div>
+
+
+{%endblock content%}

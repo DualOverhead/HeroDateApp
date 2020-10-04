@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="jumbotron bg-dark">
+    <h1 class="display-4 text-danger">Your Message has Been Sent to {{hero_name}}</h1>
+    <h3 class="lead text-danger">You should receive a message soon (make sure to check your spam folder)</h3>
+    <p class="lead text-danger">The World's #1 Hero Dating Site!</p>
+    <hr class="bg-danger">
+    <form method="POST" action="{%url 'intro' %}">
+        {% csrf_token %}
+        <span> <button class=" btn btn-block btn-success btn-sm float-right " type="submit">Search for More Hero Hunks and Hotties</button>
+        </span>
+    </form>
+</div>
+
+{% endblock content %}

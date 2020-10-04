@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="jumbotron bg-dark">
+    <h1 class="display-4 text-danger">Message Your Hero!</h1>
+    <p class="lead text-danger">The World's #1 Hero Dating Site!</p>
+    <hr class="bg-danger">
+    <form method="POST" action="{%url 'messagesent' %}">
+        {% csrf_token %}
+        <p class="lead text-danger">To: {{hero_name}}</p>
+        <p class="lead text-danger">From: {{user}}</p>
+        <div class="form-group">
+          <label for="exampleFormControlInput1 " class="text-danger">Subject:</label>
+          <input name="your_subject" type="text" class="form-control" id="exampleFormControlInput1" placeholder="-subject-">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1" class="text-danger">Your Message:</label>
+          <textarea name="your_message"class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="-your message-"></textarea>
+        </div>
+                <input type="hidden" name="hero_name_send" value={{hero_name_send}} />
+                <span> <button class=" btn btn-block btn-success btn-sm float-right " type="submit">Send Message</button>
+                </span>
+      </form>
+  </div>
+
+{% endblock content %}

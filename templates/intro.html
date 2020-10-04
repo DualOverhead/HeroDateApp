@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="jumbotron bg-dark">
+    {% if user.is_authenticated %} 
+    <h5 class="lead text-danger">Welcome {{user}}</h5>
+    {% endif %}
+    {% if not user.is_authenticated %}
+    <h5 class="lead text-danger">Please Log In or Sign Up to Continue</h5>
+    <a href="{% url 'login' %}"> <button type="button" class="btn btn-success btn-lg">Log In</button></a>
+    <a href="{% url 'signup' %}"><button type="button" class="btn btn-success btn-lg">Sign Up</button></a>
+    {% endif %}
+    <h1 class="display-4 text-danger">Find Your Hero!</h1>
+    <p class="lead text-danger">The World's #1 Hero Dating Site!</p>
+    <hr class="my-4 bg-danger">
+    <div class="card-group ">
+        <div class="card bg-dark  card border-info">
+            <br>
+            <img src="{{fem_list.0.female_url}}" class="card-img-top w-50 rounded mx-auto d-block" alt="...">
+            <div class="card-body">
+                <hr class="bg-info">
+                <h5 class="card-title text-info text-center">{{fem_list.0.female_name}}</h5>
+                <hr class="bg-info">
+                {% if user.is_authenticated %}
+                <form method="POST" action="{%url 'home' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="gender" value="Female" />
+                    <span> <button class=" btn btn-block btn-success btn-sm float-right " type="submit">Find Your Hero Hottie</button>
+                    </span>
+                </form> 
+                {% endif %}
+                <p class="card-text text-info font-weight-bold text-center"> <small>Check out {{fem_list.0.female_name}} and other Hero Hotties </small> </p>                              
+            </div>
+        </div>
+        <div class="card bg-dark  card border-info">
+            <br>
+            <img src="{{male_list.0.male_url}} " class="card-img-top w-50 rounded mx-auto d-block" alt="...">
+            <div class="card-body">
+                <hr class="bg-info">
+                <h5 class="card-title text-info text-center">{{male_list.0.male_name}}</h5>
+                <hr class="bg-info">
+                {% if user.is_authenticated %}
+                <form method="POST" action="{%url 'home' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="gender" value="Male" />
+                    <span> <button class=" btn btn-block btn-success btn-sm float-right " type="submit">Find Your Hero Hunk</button>
+                    </span>
+                </form>
+                {% endif %}
+                <p class="card-text text-info font-weight-bold text-center"> <small>Check out {{male_list.0.male_name}} and other Hero Hunks </small> </p>                          
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
