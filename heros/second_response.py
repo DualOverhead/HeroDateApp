@@ -1,0 +1,5 @@
+second_response=[ "I’m new to this dating scene and to be honest, it kind of scares me", "I don’t normally contact people on this, but I find you very intriguing","How does a person like me get a date with someone like you?"
+,"I love Paris. Did you go to the top of the Eiffel Tower?","You’re a real foodie. If we were to go out for dinner, where would we go?","What’s your favourite pizza topping?","This app says we’re 93 per cent compatible. I’d like to test that out in real life",
+"You look like someone I could take home to my mom and whisk away for a romantic weekend","My friends would be jealous if you went out with me","Looks like blue skies all weekend. How are you planning to take advantage of the sunshine?",
+"I'm going camping with my bestie next month. What fun stuff have you got coming up?","Tell me two truths and a lie about yourself!","You're given a million dollars but have to spend it all in a day and have nothing to show for it by the end. What does that day look like?",
+]

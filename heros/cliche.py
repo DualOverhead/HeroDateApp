@@ -1,0 +1,11 @@
+cliche_list= ["I'm normal", "I don't watch television",
+                   "I like travelling", "I enjoy long walks on the beach at sunset", "I like to stay in with a glass of wine and a DVD", "I'm easy-going", 
+                   "My life is fab. I just need someone to share it with", "I like walks in the park, watching movies and going to the pub on Sunday for roast dinner",
+                   "I'm here for some good banter", "I like going out and staying in", "I love laughing", "I'm new to this, so here goes...", 
+                   "I have a low tolerance for nonsense.", "I love to laugh.", "I'm totally normal.", "My friends tell me I should be a model", 
+                   "You can take me to the ballet or a NASCAR race.","I like to geek out!","Looking for a warm soul to melt my heart",
+                   "I'm obsessed with my cat.", "I like to cuddle","Snuggles make me happy","Sunday trips to the Farmer's market.",
+                   "Must love dogs", "I'm looking for someone who doesn't take themselves so seriously", "Don't be a creep", "Call 911,cuz UR Smoking!!","Was your mother a beaver?‘Cause damn!","If I could rearrange the alphabet, I'd put 'I' and 'U' together.",
+                   "420 friendly, wink", "I'm a nerd lol", "Not looking for anything serious", "My friends say that I'm too kind",
+                   "Fast,Loose and Wild!","My friends and family are really important to me.","Do you believe in love at first sight? Or should I walk past you again?", "Are you a camera? Because every time I look at you, I smile!",
+                   "I can't wait to learn more about you're experiences.", "I wasn't always religious. But I am now, because you're the answer to all my prayers.","I'm super laid back.","Remember me? Oh, that's right, I've only met you in my dreams.","Want a raisin? No? Well, how about a date?"]
